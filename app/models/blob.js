@@ -2,6 +2,8 @@ import Ember from "ember";
 import GitObject from "./git-object";
 
 var Blob = GitObject.extend({
+  icon: 'fa-file-text-o',
+
   body: function() {
     return this.get('content');
   }.property('content'),

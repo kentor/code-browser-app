@@ -1,3 +1,54 @@
-html, body {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue";
+  font-size: 14px;
   margin: 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.object-container {
+  border: 1px solid #ddd;
+}
+
+.tree-list {
+  list-style-type: none;
+}
+
+.tree-item {
+  border-bottom: 1px solid #eee;
+  display: block;
+  padding: 10px;
+}
+
+.tree-item:last-of-type {
+  border-bottom: 0;
+}
+
+.tree-icon {
+  margin: 0 5px 0 0;
+}
+
+.blob-content {
+  padding: 10px;
+}
+
+.breadcrumbs {
+  margin: 10px 0;
+}
+
+.breadcrumbs a {
+  color: dodgerblue;
 }

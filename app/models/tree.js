@@ -27,6 +27,8 @@ var GitObjectFactory = Ember.Object.create({
 });
 
 Tree = GitObject.extend({
+  icon: 'fa-folder-o',
+
   filesAsObjects: function() {
     var files = this.get('files');
     if (Ember.isArray(files)) {

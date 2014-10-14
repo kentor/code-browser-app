@@ -1,5 +1,8 @@
-<ul>
+<ul class="object-container tree-list">
   {{#each filesAsObjects}}
-    <li>{{link-to name type this}}</li>
+    <li class="tree-item">
+      <i {{bind-attr class=":fa icon :tree-icon"}}></i>
+      {{link-to name type this}}
+    </li>
   {{/each}}
 </ul>
