@@ -1,5 +1,7 @@
 # Code-browser-app
 
+Prototype git source code browser built on Ember. Demo: http://hidden-springs-2614.herokuapp.com/
+
 This README outlines the details of collaborating on this Ember application.
 
 A short introduction of this app could easily go here.
