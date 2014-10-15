@@ -43,14 +43,27 @@ Tree = GitObject.extend({
 });
 
 Tree.reopenClass({
+  cache: {},
+
   fetch: function(path, branch) {
     if (Ember.isNone(branch)) {
       branch = 'master';
     }
 
+    var branchAndPath = '%@/%@'.fmt(branch, path);
+
+    if (this.cache[branchAndPath]) {
+      return this.cache[branchAndPath];
+    }
+
     return Ember.$.ajax({
       url: Api.urlForPath('/api/tree/%@/%@'.fmt(branch, path)),
       dataType: 'json',
+      context: this,
+    }).then(function(response) {
+      var tree = this.create(response);
+      this.cache[branchAndPath] = tree;
+      return tree;
     });
   },
 });
