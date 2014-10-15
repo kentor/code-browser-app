@@ -6,7 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('blob', { path: 'blob/:branch/*path' });
+  this.route('blob', { path: '/blob/*branchAndPath' });
   this.route('tree', { path: '/tree/*branchAndPath' });
 });
 

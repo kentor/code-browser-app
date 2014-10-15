@@ -4,7 +4,7 @@
   {{#each filesAsObjects}}
     <li class="tree-item">
       <i {{bind-attr class=":fa icon :tree-icon"}}></i>
-      {{link-to name type this}}
+      {{link-to name type branchAndPath}}
     </li>
   {{/each}}
 </ul>
