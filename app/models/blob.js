@@ -1,4 +1,5 @@
 import Ember from "ember";
+import Api from "./api";
 import GitObject from "./git-object";
 
 var Blob = GitObject.extend({
@@ -16,7 +17,7 @@ Blob.reopenClass({
     }
 
     return Ember.$.ajax({
-      url: 'http://localhost:4567/api/blob/%@/%@'.fmt(branch, path),
+      url: Api.urlForPath('/api/blob/%@/%@'.fmt(branch, path)),
       dataType: 'json',
     });
   }

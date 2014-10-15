@@ -1,4 +1,5 @@
 import Ember from "ember";
+import Api from "./api";
 import GitObject from "./git-object";
 import Blob from "./blob";
 
@@ -48,7 +49,7 @@ Tree.reopenClass({
     }
 
     return Ember.$.ajax({
-      url: 'http://localhost:4567/api/tree/%@/%@'.fmt(branch, path),
+      url: Api.urlForPath('/api/tree/%@/%@'.fmt(branch, path)),
       dataType: 'json',
     });
   },
